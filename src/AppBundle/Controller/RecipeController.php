@@ -6,7 +6,7 @@ use AppBundle\Entity\User;
 use AppBundle\Form\RecipeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\BrowserKit\Request;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -35,26 +35,25 @@ use Symfony\Component\HttpFoundation\Response;
          */
 
         public function addRecipe(Request $request){
-/*
+
             $recipe = new Recipe();
             $user = $this->getUser();
 
             $recipe->setUser($user);
-            $recipe->setTitle('test cow');
-            $recipe->setInstructions('damn you shouldnt eat, test cow!!!');
 
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($recipe);
-            $em->flush();
-*/
-            $form = $this->createForm(RecipeFormType::class);
+
+            $form = $this->createForm(RecipeFormType::class, $recipe);
+
 
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()){
-                dump($form->getData());
-                die;
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($recipe);
+                $em->flush();
+
+                return $this->redirectToRoute('fos_user_profile_show');
             }
 
 

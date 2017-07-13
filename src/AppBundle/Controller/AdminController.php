@@ -22,6 +22,23 @@ class AdminController extends Controller{
     }
 
     /**
+     * @Route("/admin/recipes", name="admin_recipes")
+     */
+
+    public function getRecipes(){
+        $em = $this->getDoctrine()->getManager();
+        $recipees = $em->getRepository('AppBundle:Recipe')
+            ->findAll();
+
+
+        return $this->render("admin/aRecipes.html.twig", [
+            'recipees' => $recipees
+        ]);
+    }
+
+
+
+    /**
      * @Route("/admin/users", name="admin_allusers")
      */
 
@@ -39,6 +56,14 @@ class AdminController extends Controller{
         return $this->render('admin/aEditprofiles.html.twig', [
            'users' => $users
         ]);
+    }
+
+    /**
+     * @Route("/admin/user/edit", name="admin_edituser")
+     */
+
+    public function editUser(){
+
     }
 
     /**
@@ -65,5 +90,28 @@ class AdminController extends Controller{
         return $this->render('admin/aAddUser.html.twig', [
             'admin_newUser' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/admin/user/delete/{id}", name="admin_deleteuser")
+     */
+
+    public function deleteUser($id){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $recipeData = $em->getRepository('AppBundle:Recipe')
+            ->findOneBy(['user' => $id]);
+
+        $profileData = $em->getRepository('AppBundle:User')
+            ->findOneBy(['id' => $id]);
+
+        $em->remove($profileData);
+        $em->remove($recipeData);
+        $em->flush();
+
+        return $this->render('admin/aUserDeleted.html.twig');
+
+
     }
 }

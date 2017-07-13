@@ -21,9 +21,9 @@ class Recipe{
 
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="recipe")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
-    private $User;
+    private $user;
 
     /**
     *@ORM\Column(type="string", name="title", length=100)
@@ -164,13 +164,13 @@ class Recipe{
     /**
      * Set rUser
      *
-     * @param \AppBundle\Entity\User $User
+     * @param \AppBundle\Entity\User $user
      *
      * @return Recipe
      */
-    public function setUser(User $User = null)
+    public function setUser(User $user = null)
     {
-        $this->User = $User;
+        $this->user = $user;
 
         return $this;
     }
@@ -182,6 +182,6 @@ class Recipe{
      */
     public function getUser()
     {
-        return $this->User;
+        return $this->user;
     }
 }

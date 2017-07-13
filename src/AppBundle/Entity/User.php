@@ -5,6 +5,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 
@@ -14,7 +15,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 */
 
 /**
-*@ORM\Entity
+*@ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
 *@ORM\Table(name="`User`")
 */
 class User extends BaseUser{
@@ -29,7 +30,7 @@ class User extends BaseUser{
 
 
     /**
-    * @ORM\OneToMany(targetEntity="Recipe", mappedBy="User")
+    * @ORM\OneToMany(targetEntity="Recipe", mappedBy="user")
     */
     private $recipe;
 
@@ -37,6 +38,11 @@ class User extends BaseUser{
     * @ORM\Column(type="text", nullable=true)
     */
     protected $bio;
+
+    public function __construct()
+    {
+        $this->recipe = new ArrayCollection();
+    }
 
 
     /**
@@ -62,4 +68,14 @@ class User extends BaseUser{
     {
         return $this->bio;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRecipe()
+    {
+        return $this->recipe;
+    }
+
+
 }
