@@ -24,6 +24,11 @@ class ProfileController extends Controller {
                         ->findOneBy(['username' => $profilename])
             ;
 
+        
+        $recipeData = $em->getRepository('AppBundle:Recipe')
+                        ->findOneBy(['user_id' => $recipe])
+        ;
+
         if (!$profileData){
             throw $this->createNotFoundException('profile not found :(');
         }
