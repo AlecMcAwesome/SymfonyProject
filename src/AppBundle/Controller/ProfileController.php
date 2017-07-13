@@ -13,7 +13,24 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProfileController extends Controller {
 
-    public function showProfile(){
+    /**
+     * @Route("/profile/{profilename}", name="profilename")
+     */
+    public function showProfile($profilename){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $profileData = $em->getRepository('AppBundle:User')
+                        ->findOneBy(['username' => $profilename])
+            ;
+
+        if (!$profileData){
+            throw $this->createNotFoundException('profile not found :(');
+        }
+
+        return $this->render('Profile/ProfilePage.html.twig', [
+            'profile' => $profileData
+        ]);
 
     }
 

@@ -22,12 +22,11 @@
         <tbody>
         {% for Recipe in recipes %}
             <tr>
-                <td><a href="{{ path('recipename', {
-                        'recipename': Recipe.title
-                    })}}">{{ Recipe.title }}</a>
+                <td><a href="{{ path('recipename', {'recipename': Recipe.title})}}">{{ Recipe.title }}</a>
                 </td>
                 <td>{{ Recipe.instructions }}</td>
-                <td>{{ Recipe.user }}</td>
+                <td><a href="{{ path('profilename', {'profilename' : Recipe.user})}}">{{ Recipe.user }}</a>
+                </td>
                 <td>{{ Recipe.createdAt|date('Y-m-d') }}</td>
                 <td><button type="button" class="btn btn-success">Download</button>
                 </td>
