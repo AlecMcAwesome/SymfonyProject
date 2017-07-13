@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\User;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -19,13 +20,14 @@ class AdminFormType extends AbstractType
                 ->add('username', TextType::class)
                 ->add('email', EmailType::class)
                 ->add('password', PasswordType::class)
-                ->add('confirmpassword', PasswordType::class)
+                ->add('confirmpassword', PasswordType::class, ['mapped' => false])
                 ->add('bio', TextareaType::class)
-                ->add('role', ChoiceType::class, array(
+                ->add('role', ChoiceType::class, ['mapped' => User::ROLE_DEFAULT], array(
                     'choices' => array(
-                        'ROLE_USER' => false,
-                        'ROLE_ADMIN' => true,
-                    )));
+                        'admin' => true,
+                        'user' => false,
+                    ),
+                ));
     }
 
 

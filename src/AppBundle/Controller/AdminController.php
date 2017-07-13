@@ -47,8 +47,11 @@ class AdminController extends Controller{
 
     public function addNewUser(Request $request){
 
+        $usermanager = $this->get('fos_user.user_manager');
+        $newUser = $usermanager->createUser();
+
         // oprette en form med dan for vi har lavet i AdminFormType
-        $form = $this->createForm(AdminFormType::class);
+        $form = $this->createForm(AdminFormType::class, $newUser);
 
         // håndtere requested fra submit knappen
         $form->handleRequest($request);
