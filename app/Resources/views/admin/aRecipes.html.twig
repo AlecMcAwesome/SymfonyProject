@@ -10,7 +10,8 @@
                 <th>instructions:</th>
                 <th>Created By:</th>
                 <th>Created At:</th>
-                <th>Get Recipe:</th>
+                <th>Edit Recipe:</th>
+                <th>Delete Recipe</th>
             </tr>
             </thead>
             <tbody>
@@ -21,6 +22,8 @@
                     <td> {{ Recipe.user }}</td>
                     <td>{{ Recipe.createdAt|date('Y-m-d') }}</td>
                     <td><button type="button" class="btn btn-success">Edit</button>
+                    </td>
+                    <td><button type="button" class="btn btn-success"><a href="{{ path('admin_deleteRecipe', {'name': Recipe.title}) }}">Delete</a></button>
                     </td>
                 </tr>
             {% endfor %}

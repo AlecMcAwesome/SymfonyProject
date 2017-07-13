@@ -36,6 +36,23 @@ class AdminController extends Controller{
         ]);
     }
 
+    /**
+     * @Route("/admin/recipes/delete/{name}", name="admin_deleteRecipe")
+     */
+    public function deleteRecipe($name){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $recipeData = $em->getRepository('AppBundle:Recipe')
+                    ->findOneBy(['title' => $name]);
+
+        $em->remove($recipeData);
+        $em->flush();
+
+        return $this->redirectToRoute('admin_recipes');
+
+    }
+
 
 
     /**
@@ -107,10 +124,14 @@ class AdminController extends Controller{
             ->findOneBy(['id' => $id]);
 
         $em->remove($profileData);
-        $em->remove($recipeData);
-        $em->flush();
+        if(!$recipeData){
+            $em->flush();
+        }else {
+            $em->remove($recipeData);
+            $em->flush();
+        }
+        return $this->redirectToRoute('admin_allusers');
 
-        return $this->render('admin/aUserDeleted.html.twig');
 
 
     }
