@@ -62,7 +62,6 @@ use Symfony\Component\HttpFoundation\Response;
                 'newRecipe' => $form->createView()
             ]);
 
-            return new Response('<html><body>recipe created</body></html>');
         }
 
 
