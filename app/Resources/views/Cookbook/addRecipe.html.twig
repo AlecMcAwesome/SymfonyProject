@@ -2,5 +2,10 @@
 
 {% block body %}
     <h1>Recipe here!!</h1>
+
+    {{ form_start(newRecipe) }}
+    {{ form_widget(newRecipe) }}
+    <button type="submit" class="btn btn-success">Add Recipe</button>
+    {{ form_end(newRecipe) }}
 {% endblock %}
 
