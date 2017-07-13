@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProfileController extends Controller {
 
     /**
-     * @Route("/profile/{profilename}/recipes", name="profilename")
+     * @Route("/profile/{profilename}", name="profilename")
      */
     public function showProfile($profilename){
 
@@ -31,13 +31,11 @@ class ProfileController extends Controller {
         }
 
 
-        $recipeData = $em->getRepository('AppBundle:Recipe');
+
 
         return $this->render('Profile/ProfilePage.html.twig', [
             'profile' => $profileData,
         ]);
     }
-
-
 
 }

@@ -1,20 +1,20 @@
 {% trans_default_domain 'FOSUserBundle' %}
 <style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 50%;
-}
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+    }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
 </style>
 
 <h1>Your profile page:</h1>
@@ -25,32 +25,41 @@ tr:nth-child(even) {
     <p>{{ 'Bio'|trans }}: {{ user.bio }}</p>
 </div>
 
-<button type="button" class="btn"><a href="{{ path('fos_user_profile_edit')}}">Edit User</a></button>
-<button type="button" class="btn"><a href="{{ path('fos_user_change_password')}}">Reset Password</a></button>
-<button type="button" class="btn"><a href="{{ path('newRecipe')}}">Create Recipe</a></button>
+<button type="button" class="btn"><a href="{{ path('fos_user_profile_edit') }}">Edit User</a></button>
+<button type="button" class="btn"><a href="{{ path('fos_user_change_password') }}">Reset Password</a></button>
+<button type="button" class="btn"><a href="{{ path('newRecipe') }}">Create Recipe</a></button>
 
 
 <h2>
     Created Recipees:
 </h2>
 
-<table>
-   <tr>
-<th>Name:</th>
-<th>instructions</th>
-<th>author</th>
-</tr>
 
-<tr>
-    <td>banana Cake</td>
-    <td>long description</td>
-    <td>test1</td>
-</tr>
-
-<tr>
-    <td>watermelon juice</td>
-    <td>longer description</td>
-    <td>test1</td>
-
-</tr> 
-</table>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
