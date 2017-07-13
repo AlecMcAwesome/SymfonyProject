@@ -3,7 +3,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Recipe;
 use AppBundle\Entity\User;
-use AppBundle\Form\RecipeFormType;
+use AppBundle\Form\AddRecipeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -43,7 +43,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 
 
-            $form = $this->createForm(RecipeFormType::class, $recipe);
+            $form = $this->createForm(AddRecipeFormType::class, $recipe);
 
 
             $form->handleRequest($request);

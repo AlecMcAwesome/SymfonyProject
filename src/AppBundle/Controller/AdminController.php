@@ -4,7 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\User;
 use AppBundle\Form\AdminForm;
-use AppBundle\Form\AdminFormType;
+use AppBundle\Form\AdminCreateUserFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -92,8 +92,8 @@ class AdminController extends Controller{
         $usermanager = $this->get('fos_user.user_manager');
         $newUser = $usermanager->createUser();
 
-        // oprette en form med dan for vi har lavet i AdminFormType
-        $form = $this->createForm(AdminFormType::class, $newUser);
+        // oprette en form med dan for vi har lavet i AdminCreateUserFormType
+        $form = $this->createForm(AdminCreateUserFormType::class, $newUser);
 
         // håndtere requested fra submit knappen
         $form->handleRequest($request);

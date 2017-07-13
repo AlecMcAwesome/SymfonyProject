@@ -2,6 +2,6 @@
 
 namespace AppBundle\Form;
 
-class EditFormType{
+class EditProfileFormType{
     
 }

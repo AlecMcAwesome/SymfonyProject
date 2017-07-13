@@ -12,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class AdminFormType extends AbstractType
+class AdminCreateUserFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
