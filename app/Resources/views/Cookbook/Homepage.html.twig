@@ -1,10 +1,27 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <style>
+        #header{
+            display: flex;
+            justify-content: center;
+        }
+
+        #underheader{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+
+{% endblock %}
 {% block body %}
 
-<h1>Hello World</h1>
+    <div id="header" class="page-header">
+        <h1>WELCOME TO STROM COOKBOK MY DEAR FRIENDS!!!</h1>
+    </div>
 
-<h3>
+<h3 id="underheader">
     The Table shows all created recipees:
 </h3>
 

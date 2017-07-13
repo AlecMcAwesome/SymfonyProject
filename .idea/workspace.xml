@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="652301b5-8969-44b3-ad23-859f6cb0d010" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/admin/aUserDeleted.html.twig" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/AdminFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/EditFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/EditProfileFormType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppBundle/Form/RecipeFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/AddRecipeFormType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin/aAddUser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/aAddUser.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Cookbook/Homepage.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Cookbook/Homepage.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,12 +73,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationFormType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegistrationFormType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/RegistrationFormType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#33#73#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Homepage.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/Cookbook/Homepage.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+              <folding>
+                <element signature="e#1063#1074#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,7 +143,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/Cookbook/Recipees.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Cookbook/homepage.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/HomepageController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Cookbook/Homepage.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/NewRecipeFormType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AdminFormType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/Profile/ProfilePage.html.twig" />
@@ -154,6 +161,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/aAddUser.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Cookbook/Homepage.html.twig" />
       </list>
     </option>
   </component>
@@ -695,7 +703,7 @@
       <workItem from="1499879911146" duration="3836000" />
       <workItem from="1499888023175" duration="14514000" />
       <workItem from="1499952072468" duration="5855000" />
-      <workItem from="1499970731908" duration="10201000" />
+      <workItem from="1499970731908" duration="10645000" />
     </task>
     <task id="LOCAL-00001" summary="added all">
       <created>1499952151326</created>
@@ -732,11 +740,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499986624248</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ændret navne på FormTypes">
+      <created>1499986938520</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1499986938520</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42040000" />
+    <option name="totallyTimeSpent" value="42484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -773,7 +788,8 @@
     <MESSAGE value="problemer med ChoiceType for roles&#10;&#10;Warning: Missing argument 1 for FOS\UserBundle\Model\User::hasRole(), called in /Users/FrederikPetersen/Desktop/KEA - Datamatiker/Symfony/PraktikStrom/vendor/symfony/symfony/src/Symfony/Component/PropertyAccess/PropertyAccessor.php on line 486 and defined&#10;&#10;&#10;$form = $this-&gt;createForm(AdminFormType::class, $newUser);" />
     <MESSAGE value="Delete user added for admin, showing recipes in admin page(making username linkable) user can now create recipes" />
     <MESSAGE value="delete recipe added" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete recipe added" />
+    <MESSAGE value="ændret navne på FormTypes" />
+    <option name="LAST_COMMIT_MESSAGE" value="ændret navne på FormTypes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -983,14 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Cookbook/Homepage.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1154,7 +1162,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#33#73#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Cookbook/Homepage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#1063#1074#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
