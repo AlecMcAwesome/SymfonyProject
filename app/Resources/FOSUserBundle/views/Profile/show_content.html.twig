@@ -1,0 +1,56 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<h1>Your profile page:</h1>
+
+<div class="fos_user_user_show">
+    <p>{{ 'username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'email'|trans }}: {{ user.email }}</p>
+    <p>{{ 'Bio'|trans }}: {{ user.bio }}</p>
+</div>
+
+<button type="button" class="btn"><a href="{{ path('fos_user_profile_edit')}}">Edit User</a></button>
+<button type="button" class="btn"><a href="{{ path('fos_user_change_password')}}">Reset Password</a></button>
+<button type="button" class="btn"><a href="{{ path('newRecipe')}}">Create Recipe</a></button>
+
+
+<h2>
+    Created Recipees:
+</h2>
+
+<table>
+   <tr>
+<th>Name:</th>
+<th>instructions</th>
+<th>author</th>
+</tr>
+
+<tr>
+    <td>banana Cake</td>
+    <td>long description</td>
+    <td>test1</td>
+</tr>
+
+<tr>
+    <td>watermelon juice</td>
+    <td>longer description</td>
+    <td>test1</td>
+
+</tr> 
+</table>

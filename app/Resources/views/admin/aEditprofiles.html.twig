@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <style>
+        #adduser{
+            margin-left: 75px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {% if is_granted('ROLE_ADMIN') %}
+
+        <div id="adduser">
+            <button type="button" class="btn btn-success"><a href="{{ path('admin_newuser') }}">Add User</a></button>
+
+        </div>
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>User:</th>
+                    <th>Email:</th>
+                    <th>Password:</th>
+                    <th>Bio:</th>
+                    <th>Edit:</th>
+                    <th>Delete:</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for User in users %}
+                    <tr>
+                        <td>{{ User.username }}</td>
+                        <td>{{ User.email }}</td>
+                        <td>{{ User.password }}</td>
+                        <td>{{ User.bio }}</td>
+                        <td>
+                            <button type="button" class="btn btn-success">Edit</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success">Delete</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+
+    {% endif %}
+
+{% endblock %}

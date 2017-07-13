@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>Hello World</h1>
+
+<h3>
+    The Table shows all created recipees:
+</h3>
+
+    <div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Recipe:</th>
+            <th>instructions:</th>
+            <th>Created By:</th>
+            <th>Created:</th>
+            <th>Get Recipe:</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for Recipe in recipes %}
+            <tr>
+                <td><a href="{{ path('recipename', {
+                        'recipename': Recipe.title
+                    })}}">{{ Recipe.title }}</a>
+                </td>
+                <td>{{ Recipe.instructions }}</td>
+                <td>{{ Recipe.user }}</td>
+                <td>{{ Recipe.createdAt|date('Y-m-d') }}</td>
+                <td><button type="button" class="btn btn-success">Download</button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

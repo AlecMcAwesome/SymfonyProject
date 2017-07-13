@@ -9,7 +9,7 @@
 namespace AppBundle\Repository;
 
 
-class UserRepository
+class UserRepository extends \Doctrine\ORM\EntityRepository
 {
 
 }

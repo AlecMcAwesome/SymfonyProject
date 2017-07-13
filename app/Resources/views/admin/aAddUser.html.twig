@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>add user here</h1>
+
+    {{ form_start(admin_newUser) }}
+    {{ form_widget(admin_newUser) }}
+    <button type="submit" class="btn btn-success">Add User</button>
+    {{ form_end(admin_newUser) }}
+
+{% endblock %}
+

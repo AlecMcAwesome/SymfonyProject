@@ -1,0 +1,59 @@
+<!--Base.html.twig er basen for hvordan din hjemmeside ser ud. det er din basic template til din hjemmeside
+    når base.html.twig skal sættes ind i din side skal du skrive {procent extend 'base.html.twig' procent}
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}CookBook Strøm{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% block stylesheets %}
+    {% endblock %}
+
+</head>
+
+<body>
+<!-- Navigationsbar fra bootstrap -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">CookBook</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{{ path('homepage')}}">Home</a></li>
+                {% if is_granted('ROLE_ADMIN') %}
+                <li><a href="{{ path('admin_profile')}}">Admin</a></li>
+                {% else %}
+                <li><a href="{{ path('fos_user_profile_show')}}">Profile</a></li>
+                {% endif %}
+                <li><a href="{{ path('recipes') }}">Recipees</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <!-- sætter path til FOSUserbundles registringsform --> 
+                <li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <!-- hvis den besøgende har ROLE_USER og ikke anonymous
+                        skal log ind knapped skiftes ud med log ud
+                 -->
+                {% if is_granted('ROLE_USER') %}
+                <!-- sætter path til FOSUserbundles logudform --> 
+                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                {% else %}
+                <!-- sætter path til FOSUserbundles loginform --> 
+                <li><a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                <!-- afslut if statement -->
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    {% block body %} {% endblock %}
+{% block javascripts %} {% endblock %}
+</body>
+
+</html>

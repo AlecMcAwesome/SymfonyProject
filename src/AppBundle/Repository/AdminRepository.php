@@ -9,7 +9,7 @@
 namespace AppBundle\Repository;
 
 
-class AdminRepository
+class AdminRepository extends \Doctrine\ORM\EntityRepository
 {
 
 }

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Recipe {{ recipe.title }}
+{% endblock %}
+
+{% block body %}
+
+<h1>Recipe for {{ recipe.title }}</h1>
+    <h2>Created By: {{ recipe.user }} </h2>
+
+    <h3>Instructions: </h3>
+    <p> {{ recipe.instructions }}</p>
+
+{% endblock %}

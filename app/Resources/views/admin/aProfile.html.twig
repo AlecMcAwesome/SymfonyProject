@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- Admin profil skal kun være viseligt hvis en ROLE_ADMIN er logget ind -->
+    {% if is_granted('ROLE_ADMIN') %}
+        <h1>Hello admin</h1>
+
+        <h2>Add/Remove User</h2>
+
+
+        <button type="button" class="btn btn-success"><a href="{{ path('admin_allusers') }}">Edit User</a></button>
+
+
+
+
+    {% endif %}
+{% endblock %}
