@@ -77,5 +77,20 @@ class User extends BaseUser{
         return $this->recipe;
     }
 
+    /**
+     * @return array
+     */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * @param array $roles
+     */
+
+
+
+
 
 }

@@ -33,6 +33,8 @@ class ProfileController extends Controller {
 
 
 
+
+
         return $this->render('Profile/ProfilePage.html.twig', [
             'profile' => $profileData,
         ]);
