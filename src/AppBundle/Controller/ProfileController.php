@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProfileController extends Controller {
 
     /**
-     * @Route("/profile/{profilename}", name="profilename")
+     * @Route("/profile/{profilename}/", name="profilename")
      */
     public function showProfile($profilename){
 
@@ -26,6 +26,10 @@ class ProfileController extends Controller {
                         ->findOneBy(['username' => $profilename])
             ;
 
+        $recipeData = $em->getRepository('AppBundle:Recipe')
+                            ->findBy(['user' => $profileData->getId()])
+            ;
+
         if (!$profileData){
             throw $this->createNotFoundException('profile not found :(');
         }
@@ -33,10 +37,9 @@ class ProfileController extends Controller {
 
 
 
-
-
         return $this->render('Profile/ProfilePage.html.twig', [
             'profile' => $profileData,
+            'recipes' => $recipeData
         ]);
     }
 

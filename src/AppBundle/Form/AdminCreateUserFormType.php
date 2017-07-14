@@ -3,7 +3,6 @@
 namespace AppBundle\Form;
 
 use AppBundle\Entity\User;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -23,13 +22,12 @@ class AdminCreateUserFormType extends AbstractType
                 ->add('password', PasswordType::class)
                 ->add('confirmpassword', PasswordType::class, ['mapped' => false])
                 ->add('bio', TextareaType::class)
-                ->add('role', ChoiceType::class, array(
+                ->add('role', ChoiceType::class, ['mapped' => false], array(
                     'choices' => array(
-                        'ROLE_ADMIN'   => 'ROLE_ADMIN',
-                        'ROLE_USER' => 'ROLE_USER',
+                        'admin' => 'ROLE_ADMIN',
+                        'user' => 'ROLE_USER',
                     ),
-                ))
-            ;
+                ));
     }
 
 

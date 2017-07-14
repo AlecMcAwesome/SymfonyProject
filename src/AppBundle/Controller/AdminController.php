@@ -91,13 +91,9 @@ class AdminController extends Controller{
 
         $usermanager = $this->get('fos_user.user_manager');
         $newUser = $usermanager->createUser();
-        $newUser->hasRole('ROLE_USER');
-
 
         // oprette en form med dan for vi har lavet i AdminCreateUserFormType
         $form = $this->createForm(AdminCreateUserFormType::class, $newUser);
-
-
 
         // håndtere requested fra submit knappen
         $form->handleRequest($request);
@@ -106,6 +102,7 @@ class AdminController extends Controller{
             dump($form->getData());
             die;
         }
+
 
 
         return $this->render('admin/aAddUser.html.twig', [

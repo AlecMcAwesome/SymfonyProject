@@ -31,7 +31,7 @@
                 {% for User in users %}
                     <tr>
                         <td>{{ User.id }}</td>
-                        <td>{{ User.username }}</td>
+                        <td><a href="{{ path('profilename', {'profilename' : User.username}) }}">{{ User.username }}</a></td>
                         <td>{{ User.email }}</td>
                         <td>{{ User.password }}</td>
                         <td>{{ User.bio }}</td>

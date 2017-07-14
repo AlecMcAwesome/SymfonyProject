@@ -8,6 +8,7 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /*
     User entity! alle rækkerne fra databasen er allerede indsat fra FOSUserbudles eget schema
@@ -39,10 +40,39 @@ class User extends BaseUser{
     */
     protected $bio;
 
+    /**
+     * @ORM\Column(type="datetime")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $joined_at;
+
+    /**
+     * User constructor.
+     */
+
     public function __construct()
     {
         $this->recipe = new ArrayCollection();
+        $this->joined_at = new \DateTime('now');
     }
+
+    /**
+     * @return mixed
+     */
+    public function getJoinedAt()
+    {
+        return $this->joined_at;
+    }
+
+    /**
+     * @param mixed $joined_at
+     */
+    public function setJoinedAt($joined_at)
+    {
+        $this->joined_at = $joined_at;
+    }
+
+
 
 
     /**
@@ -76,21 +106,6 @@ class User extends BaseUser{
     {
         return $this->recipe;
     }
-
-    /**
-     * @return array
-     */
-    public function getRoles()
-    {
-        return $this->roles;
-    }
-
-    /**
-     * @param array $roles
-     */
-
-
-
 
 
 }

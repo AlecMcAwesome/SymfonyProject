@@ -1,10 +1,23 @@
+
+
 {% extends 'base.html.twig' %}
+
 {% block body %}
+
     <!-- IKKE SHOW PROFILE DETTE ER PROFILEN NÅR MAN TRYKKER PÅ LISTEN MED RECIPEES I HOMEPAGE!!!!!! -->
 
     <h1>Profile for {{ profile.username }}</h1>
 
-    <h3>List of Recipes created by: {{ profile.username }}</h3>
+    {% if is_granted('ROLE_ADMIN') %}
+        <h3> Email for {{ profile.username }} is: {{ profile.email }}</h3>
+    {% endif %}
+
+    <h3>Profile Created: {{ profile.joinedAt|date('Y-m-d') }}</h3>
+
+    <p>
+      Bio:  {{ profile.bio }}
+    </p>
+    <h4>List of Recipes created by: {{ profile.username }} </h4>
 
     <div class="container">
         <table class="table table-hover">
@@ -12,17 +25,15 @@
             <tr>
                 <th>Title</th>
                 <th>Instructions</th>
-                <th>Created At</th>
             </tr>
             </thead>
             <tbody>
-
+            {% for Recipe in recipes %}
             <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
+                <td><a href="{{ path('recipename', {'recipename' : Recipe.title}) }}">{{ Recipe.title }}</a></td>
+                <td>{{ Recipe.user }}</td>
             </tr>
-
+            {% endfor %}
             </tbody>
         </table>
     </div>
