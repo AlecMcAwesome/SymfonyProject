@@ -7,7 +7,7 @@ Recipe {{ recipe.title }}
 {% block body %}
 
 <h1>Recipe for {{ recipe.title }}</h1>
-    <h2>Created By: {{ recipe.user }} </h2>
+    <h2>Created By: <a href="{{ path('profilename', {'profilename' : recipe.user}) }}"> {{ recipe.user }} </a></h2>
 
     <h3>Instructions: </h3>
     <p> {{ recipe.instructions }}</p>

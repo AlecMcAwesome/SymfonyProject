@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -30,6 +31,12 @@ class Recipe{
     */
     private $title;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Ingredients", mappedBy="recipe")
+     * @ORM\JoinTable(name="ingredients")
+     */
+
+    private $ingredients;
     /**
     *@ORM\Column(type="text", name="instructions")
     */
@@ -88,6 +95,24 @@ class Recipe{
     {
         return $this->title;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIngredients()
+    {
+        return $this->ingredients;
+    }
+
+    /**
+     * @param mixed $ingredients
+     */
+    public function setIngredients($ingredients)
+    {
+        $this->ingredients = $ingredients;
+    }
+
+    
 
     /**
      * Set instructions

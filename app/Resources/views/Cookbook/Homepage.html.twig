@@ -30,7 +30,6 @@
         <thead>
         <tr>
             <th>Recipe:</th>
-            <th>instructions:</th>
             <th>Created By:</th>
             <th>Created:</th>
             <th>Get Recipe:</th>
@@ -41,7 +40,6 @@
             <tr>
                 <td><a href="{{ path('recipename', {'recipename': Recipe.title})}}">{{ Recipe.title }}</a>
                 </td>
-                <td>{{ Recipe.instructions }}</td>
                 <td><a href="{{ path('profilename', {'profilename' : Recipe.user})}}">{{ Recipe.user }}</a>
                 </td>
                 <td>{{ Recipe.createdAt|date('Y-m-d') }}</td>

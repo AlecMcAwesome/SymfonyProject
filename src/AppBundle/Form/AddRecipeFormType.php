@@ -3,8 +3,9 @@
 namespace AppBundle\Form;
 
 
-use function Sodium\add;
+use AppBundle\Entity\Ingredients;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,8 +19,7 @@ class AddRecipeFormType extends AbstractType
         $builder
             ->add('title', TextType::class)
             ->add('instructions', TextareaType::class)
-            ->add('submit', SubmitType::class, array('label' => 'Create Recipe'))
-        ;
+            ->add('submit', SubmitType::class, array('label' => 'Create Recipe'));
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -32,3 +32,22 @@ class AddRecipeFormType extends AbstractType
         return 'app_bundle_new_recipe_form_type';
     }
 }
+
+/*
+ *             ->add('ingredients', ChoiceType::class , array(
+                'choices' => [
+                    new Ingredients()
+                ],
+
+                'choice_label' => function($ingrediens){
+                    / @var Ingredients $ingrediens /
+if (!$ingrediens){
+    return strtoupper('No ingrediens :(');
+}else{
+    return strtoupper($ingrediens->getName());
+}
+
+}
+
+))
+ */

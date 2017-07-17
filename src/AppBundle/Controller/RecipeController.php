@@ -1,8 +1,10 @@
 <?php
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Ingredients;
 use AppBundle\Entity\Recipe;
 use AppBundle\Entity\User;
+use AppBundle\Form\AddNewIngredient;
 use AppBundle\Form\AddRecipeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -36,19 +38,18 @@ use Symfony\Component\HttpFoundation\Response;
 
         public function addRecipe(Request $request){
 
+
             $recipe = new Recipe();
             $user = $this->getUser();
-
             $recipe->setUser($user);
 
 
+            $formRecipe = $this->createForm(AddRecipeFormType::class, $recipe);
 
-            $form = $this->createForm(AddRecipeFormType::class, $recipe);
 
+            $formRecipe->handleRequest($request);
 
-            $form->handleRequest($request);
-
-            if ($form->isSubmitted() && $form->isValid()){
+            if ($formRecipe->isSubmitted() && $formRecipe->isValid()){
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($recipe);
                 $em->flush();
@@ -57,8 +58,10 @@ use Symfony\Component\HttpFoundation\Response;
             }
 
 
+
+
             return $this->render('/CookBook/addRecipe.html.twig', [
-                'newRecipe' => $form->createView()
+                'newRecipe' => $formRecipe->createView(),
             ]);
 
         }

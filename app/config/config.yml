@@ -80,3 +80,6 @@ fos_user:
     registration:
         form:
             type: AppBundle\Form\RegistrationFormType
+    profile:
+         form:
+            type: AppBundle\Form\EditProfileFormType

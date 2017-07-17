@@ -37,3 +37,6 @@ services:
 
     app.form.registration:
         class: AppBundle\Form\RegistrationFormType
+
+    app.form.profile:
+        class: AppBundle\Form\EditProfileFormType

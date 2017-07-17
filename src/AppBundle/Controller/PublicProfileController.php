@@ -11,7 +11,7 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ProfileController extends Controller {
+class PublicProfileController extends Controller {
 
     /**
      * @Route("/profile/{profilename}/", name="profilename")
