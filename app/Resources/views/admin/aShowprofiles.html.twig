@@ -36,7 +36,7 @@
                         <td>{{ User.password }}</td>
                         <td>{{ User.bio }}</td>
                         <td>
-                            <button type="button" class="btn btn-success">Edit</button>
+                            <button type="button" class="btn btn-success"><a href="{{ path('admin_edituser', {'userid' : User.id }) }}">Edit</a></button>
                         </td>
                         <td>
                             <button type="submit" class="btn btn-success"><a href="{{ path('admin_deleteuser', {'id': User.id}) }}"> Delete </a></button>

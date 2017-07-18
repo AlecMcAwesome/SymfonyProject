@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Ingredients;
 use AppBundle\Entity\Recipe;
 use AppBundle\Form\AddRecipeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,10 +49,10 @@ use Symfony\Component\HttpFoundation\Request;
             if ($formRecipe->isSubmitted() && $formRecipe->isValid()){
 
                 $em = $this->getDoctrine()->getManager();
-                $em->persist($formRecipe);
+                $em->persist($recipe);
                 $em->flush();
 
-                dump($formRecipe);
+                dump($recipe);
                 die;
 
                //  return $this->redirectToRoute('fos_user_profile_show');

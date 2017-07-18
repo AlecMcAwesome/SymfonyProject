@@ -4,8 +4,10 @@ namespace AppBundle\Controller;
 
 
 use AppBundle\Form\AdminCreateUserFormType;
+use AppBundle\Form\AdminEditProfileFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends Controller{
@@ -69,17 +71,46 @@ class AdminController extends Controller{
         ;
 
         // return vores side med users som er 'users'
-        return $this->render('admin/aEditprofiles.html.twig', [
+        return $this->render('admin/aShowprofiles.html.twig', [
            'users' => $users
         ]);
     }
 
     /**
-     * @Route("/admin/user/edit", name="admin_edituser")
+     * @Route("/admin/user/edit/{userid}", name="admin_edituser")
      */
 
-    public function editUser(){
+    public function editUser($userid){
 
+        $em = $this->getDoctrine()->getManager();
+
+        $userData = $em->getRepository('AppBundle:User')
+                ->findOneBy(['id' => $userid ]);
+
+        if (!$userData) {
+            throw $this->createNotFoundException('Unable to find User entity.');
+        }
+
+
+
+        $form = $this->createForm(AdminEditProfileFormType::class, $userData);
+
+        if($form->isSubmitted() &&  $form->isValid()){
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($form);
+            $em->flush();
+
+            return $this->redirectToRoute('admin_allusers');
+
+        }
+
+
+
+        return $this->render('admin/aEditUser.html.twig', array(
+            'userform' => $form->createView(),
+            'user' => $userData,
+        ));
     }
 
     /**

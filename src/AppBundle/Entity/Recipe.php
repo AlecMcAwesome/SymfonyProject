@@ -32,7 +32,7 @@ class Recipe{
     private $title;
 
     /**
-     * @ORM\OneToMany(targetEntity="Ingredients", mappedBy="recipe")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Ingredients", mappedBy="recipe")
      * @ORM\JoinTable(name="ingredients")
      */
 
@@ -58,6 +58,7 @@ class Recipe{
     private $modified_at;
 
     public function __construct() {
+        $this->ingredients = new ArrayCollection();
         $this->created_at = new \DateTime();
         $this->modified_at = new \DateTime();
     }
