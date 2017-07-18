@@ -36,8 +36,12 @@
                 <li><a href="{{ path('recipes') }}">Recipees</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            <!-- sætter path til FOSUserbundles registringsform --> 
+            <!-- sætter path til FOSUserbundles registringsform -->
+                {% if is_granted('ROLE_USER') %}
+                    <li> </li>
+                {% else %}
                 <li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                {% endif %}
                 <!-- hvis den besøgende har ROLE_USER og ikke anonymous
                         skal log ind knapped skiftes ud med log ud
                  -->

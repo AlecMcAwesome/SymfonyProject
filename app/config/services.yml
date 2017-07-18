@@ -40,3 +40,7 @@ services:
 
     app.form.profile:
         class: AppBundle\Form\EditProfileFormType
+
+
+    app.redirect_after_registration_subscriber:
+        class: AppBundle\EventListener\RedirectAfterEventSubscriber

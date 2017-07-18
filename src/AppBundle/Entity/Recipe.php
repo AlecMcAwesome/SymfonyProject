@@ -32,7 +32,7 @@ class Recipe{
     private $title;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Ingredients", mappedBy="recipe")
+     * @ORM\OneToMany(targetEntity="Ingredients", mappedBy="recipe")
      * @ORM\JoinTable(name="ingredients")
      */
 

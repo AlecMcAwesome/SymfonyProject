@@ -98,8 +98,13 @@ class AdminController extends Controller{
         $form->handleRequest($request);
         // hvis formen er submitted (submit knap) og er valid(der ikke står forkerte ting i) dumper i pt dataen
         if ($form->isSubmitted() && $form->isValid()){
-            dump($form->getData());
-            die;
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($form);
+            $em->flush();
+
+            //dump($form->getData());
+            //die;
         }
 
 

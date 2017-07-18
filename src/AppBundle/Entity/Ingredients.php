@@ -28,8 +28,8 @@ class Ingredients
     protected $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Recipe", inversedBy="ingredients")
-     * @ORM\JoinColumn(name="recipe_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Recipe", inversedBy="ingredients")
+     * @ORM\JoinColumn(name="recipe_id", referencedColumnName="id", nullable=true, onDelete="CASCADE")
      */
     private $recipe;
 

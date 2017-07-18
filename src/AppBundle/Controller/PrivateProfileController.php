@@ -9,8 +9,5 @@ class PrivateProfileController extends ProfileContoller
 {
     public function showCreatedRecipes(){
 
-        $user = $this->getUser();
-        
-
     }
 }
