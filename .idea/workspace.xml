@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="652301b5-8969-44b3-ad23-859f6cb0d010" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/admin/aEditUser.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/AdminEditProfileFormType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/views/admin/aEditprofiles.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/aShowprofiles.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Ingredients.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Ingredients.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Recipe.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Recipe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,57 +30,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ingredients.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Ingredients.php">
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="374">
+              <caret line="133" column="33" lean-forward="false" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="33" />
               <folding>
-                <element signature="e#130#178#0#PHP" expanded="true" />
+                <element signature="e#41#84#0#PHP" expanded="true" />
+                <element signature="e#682#960#0#PHP" expanded="false" />
+                <element signature="e#1842#1873#0#PHP" expanded="true" />
+                <element signature="e#2138#2154#1#PHP" expanded="true" />
+                <element signature="e#2618#2634#1#PHP" expanded="true" />
+                <element signature="e#2680#2707#0#PHP" expanded="true" />
+                <element signature="e#3676#3691#1#PHP" expanded="true" />
+                <element signature="e#3924#4456#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecipeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php">
+      <file leaf-file-name="AdminCreateUserFormType.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+            <state relative-caret-position="255">
+              <caret line="17" column="79" lean-forward="true" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
               <folding>
-                <element signature="e#39#72#0#PHP" expanded="true" />
-                <element signature="e#367#427#0#PHP" expanded="false" />
-                <element signature="e#437#756#0#PHP" expanded="false" />
-                <element signature="e#644#745#0#PHP" expanded="false" />
-                <element signature="e#689#744#0#PHP" expanded="false" />
-                <element signature="e#766#834#0#PHP" expanded="false" />
-                <element signature="e#1644#1722#0#PHP" expanded="false" />
-                <element signature="e#1732#2264#0#PHP" expanded="false" />
-                <element signature="e#1864#1968#0#PHP" expanded="false" />
-                <element signature="e#1998#2125#0#PHP" expanded="false" />
-                <element signature="e#2147#2253#0#PHP" expanded="false" />
-                <element signature="e#2197#2252#0#PHP" expanded="false" />
+                <element signature="e#34#74#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recipe.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Recipe.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-521">
-              <caret line="60" column="51" lean-forward="false" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="84" column="52" lean-forward="false" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,6 +66,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>addRole</find>
+      <find>ena</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,7 +117,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PrivateProfileController.php" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
@@ -154,10 +124,11 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/AdminRepository.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AdminEditProfileFormType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/aEditUser.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Ingredients.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Recipe.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php" />
       </list>
     </option>
   </component>
@@ -281,6 +252,140 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendsofsymfony" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendsofsymfony" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Type" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendsofsymfony" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendsofsymfony" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Doctrine" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PraktikStrom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="friendsofsymfony" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -555,7 +660,7 @@
       <workItem from="1500043780438" duration="7205000" />
       <workItem from="1500055737552" duration="130000" />
       <workItem from="1500235471704" duration="14081000" />
-      <workItem from="1500384981359" duration="24137000" />
+      <workItem from="1500384981359" duration="24939000" />
     </task>
     <task id="LOCAL-00001" summary="added all">
       <created>1499952151326</created>
@@ -655,11 +760,25 @@
       <option name="project" value="LOCAL" />
       <updated>1500406661475</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ingredienser returnere: &#10;&#10;Expected value of type &quot;Doctrine\Common\Collections\Collection|array&quot; for association field &#10;&quot;AppBundle\Entity\Recipe#$ingredients&quot;, got &quot;string&quot; instead.&#10;&#10;Se på entities&#10;&#10;Roller ikke Oprettet:&#10;&#10;får fejl:&#10;The class 'Symfony\Component\Form\Form' was not found in the chain configured namespaces AppBundle\Entity, FOS\UserBundle\Model">
+      <created>1500415816679</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1500415816679</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Ny fejl hos adminCreateUser: &#10;&#10;An exception occurred while executing 'INSERT INTO `User` (username, username_canonical, email, email_canonical, enabled, salt, password, last_login, confirmation_token, password_requested_at, roles, bio, joined_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' with params [&quot;test6&quot;, &quot;test6&quot;, &quot;test6@test.dk&quot;, &quot;test6@test.dk&quot;, null, null, &quot;$2y$13$QInCdJoedRUmX7\/Iz6tW4.gv9ShjIAJ89WqvOHz3RKjkfKeFxcuAC&quot;, null, null, null, &quot;N;&quot;, null, &quot;2017-07-18 23:11:24&quot;]:&#10;&#10;SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'enabled' cannot be null&#10;&#10;indsætter nok ChoiceType">
+      <created>1500416028586</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1500416028586</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92896000" />
+    <option name="totallyTimeSpent" value="93698000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,7 +832,9 @@
     <MESSAGE value="edit bio, link til profile i recipe profile, andet navn til profil controllere, tilføjet ingredienser men ikke implementeret i siden endnu" />
     <MESSAGE value="problemer med mapping" />
     <MESSAGE value="stadig problemer med mapping tilføjet admincreated user i services.yml. user kan delete recipes" />
-    <option name="LAST_COMMIT_MESSAGE" value="stadig problemer med mapping tilføjet admincreated user i services.yml. user kan delete recipes" />
+    <MESSAGE value="Ingredienser returnere: &#10;&#10;Expected value of type &quot;Doctrine\Common\Collections\Collection|array&quot; for association field &#10;&quot;AppBundle\Entity\Recipe#$ingredients&quot;, got &quot;string&quot; instead.&#10;&#10;Se på entities&#10;&#10;Roller ikke Oprettet:&#10;&#10;får fejl:&#10;The class 'Symfony\Component\Form\Form' was not found in the chain configured namespaces AppBundle\Entity, FOS\UserBundle\Model" />
+    <MESSAGE value="Ny fejl hos adminCreateUser: &#10;&#10;An exception occurred while executing 'INSERT INTO `User` (username, username_canonical, email, email_canonical, enabled, salt, password, last_login, confirmation_token, password_requested_at, roles, bio, joined_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' with params [&quot;test6&quot;, &quot;test6&quot;, &quot;test6@test.dk&quot;, &quot;test6@test.dk&quot;, null, null, &quot;$2y$13$QInCdJoedRUmX7\/Iz6tW4.gv9ShjIAJ89WqvOHz3RKjkfKeFxcuAC&quot;, null, null, null, &quot;N;&quot;, null, &quot;2017-07-18 23:11:24&quot;]:&#10;&#10;SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'enabled' cannot be null&#10;&#10;indsætter nok ChoiceType" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ny fejl hos adminCreateUser: &#10;&#10;An exception occurred while executing 'INSERT INTO `User` (username, username_canonical, email, email_canonical, enabled, salt, password, last_login, confirmation_token, password_requested_at, roles, bio, joined_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' with params [&quot;test6&quot;, &quot;test6&quot;, &quot;test6@test.dk&quot;, &quot;test6@test.dk&quot;, null, null, &quot;$2y$13$QInCdJoedRUmX7\/Iz6tW4.gv9ShjIAJ89WqvOHz3RKjkfKeFxcuAC&quot;, null, null, null, &quot;N;&quot;, null, &quot;2017-07-18 23:11:24&quot;]:&#10;&#10;SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'enabled' cannot be null&#10;&#10;indsætter nok ChoiceType" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -722,7 +843,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20170716204430.php" />
     <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20170716204444.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -732,14 +852,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AddNewIngredient.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/edit_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -868,14 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -913,16 +1017,6 @@
         <state relative-caret-position="135">
           <caret line="9" column="106" lean-forward="false" selection-start-line="9" selection-start-column="106" selection-end-line="9" selection-end-column="106" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding>
-            <element signature="e#34#74#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,14 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4693">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-39">
@@ -1063,63 +1149,6 @@
           <folding>
             <element signature="e#34#74#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="105" column="9" lean-forward="true" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
-          <folding>
-            <element signature="e#41#84#0#PHP" expanded="true" />
-            <element signature="e#682#960#0#PHP" expanded="false" />
-            <element signature="e#1842#1873#0#PHP" expanded="true" />
-            <element signature="e#2138#2154#1#PHP" expanded="true" />
-            <element signature="e#2618#2634#1#PHP" expanded="true" />
-            <element signature="e#2680#2707#0#PHP" expanded="true" />
-            <element signature="e#2891#3832#0#PHP" expanded="false" />
-            <element signature="e#3673#3688#1#PHP" expanded="true" />
-            <element signature="e#3921#4453#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Ingredients.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding>
-            <element signature="e#130#178#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding>
-            <element signature="e#39#72#0#PHP" expanded="true" />
-            <element signature="e#367#427#0#PHP" expanded="false" />
-            <element signature="e#437#756#0#PHP" expanded="false" />
-            <element signature="e#644#745#0#PHP" expanded="false" />
-            <element signature="e#689#744#0#PHP" expanded="false" />
-            <element signature="e#766#834#0#PHP" expanded="false" />
-            <element signature="e#1644#1722#0#PHP" expanded="false" />
-            <element signature="e#1732#2264#0#PHP" expanded="false" />
-            <element signature="e#1864#1968#0#PHP" expanded="false" />
-            <element signature="e#1998#2125#0#PHP" expanded="false" />
-            <element signature="e#2147#2253#0#PHP" expanded="false" />
-            <element signature="e#2197#2252#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Recipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
-          <caret line="60" column="51" lean-forward="false" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,6 +1189,104 @@
         <state relative-caret-position="653">
           <caret line="84" column="52" lean-forward="false" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Recipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-521">
+          <caret line="60" column="51" lean-forward="false" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/RecipeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <folding>
+            <element signature="e#39#72#0#PHP" expanded="true" />
+            <element signature="e#367#427#0#PHP" expanded="false" />
+            <element signature="e#437#756#0#PHP" expanded="false" />
+            <element signature="e#644#745#0#PHP" expanded="false" />
+            <element signature="e#689#744#0#PHP" expanded="false" />
+            <element signature="e#766#834#0#PHP" expanded="false" />
+            <element signature="e#1644#1722#0#PHP" expanded="false" />
+            <element signature="e#1732#2264#0#PHP" expanded="false" />
+            <element signature="e#1864#1968#0#PHP" expanded="false" />
+            <element signature="e#1998#2125#0#PHP" expanded="false" />
+            <element signature="e#2147#2253#0#PHP" expanded="false" />
+            <element signature="e#2197#2252#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Ingredients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding>
+            <element signature="e#130#178#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="133" column="33" lean-forward="false" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="33" />
+          <folding>
+            <element signature="e#41#84#0#PHP" expanded="true" />
+            <element signature="e#682#960#0#PHP" expanded="false" />
+            <element signature="e#1842#1873#0#PHP" expanded="true" />
+            <element signature="e#2138#2154#1#PHP" expanded="true" />
+            <element signature="e#2618#2634#1#PHP" expanded="true" />
+            <element signature="e#2680#2707#0#PHP" expanded="true" />
+            <element signature="e#3676#3691#1#PHP" expanded="true" />
+            <element signature="e#3924#4456#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-277">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Doctrine/UserManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-972">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="57" column="18" lean-forward="true" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AdminCreateUserFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="79" lean-forward="true" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+          <folding>
+            <element signature="e#34#74#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

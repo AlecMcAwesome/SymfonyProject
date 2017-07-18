@@ -14,11 +14,18 @@ class AdminCreateUserFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-                ->add('roles', ChoiceType::class, [
+            ->add('roles', ChoiceType::class, [
                     'choices' => ['USER' => 'ROLE_USER', 'ADMIN' => 'ROLE_ADMIN'],
                     'expanded' => true,
                     'multiple' => true,
                 ])
+            ->add('enabled', ChoiceType::class, [
+                'choices' =>[
+                    'enabled' => true,
+                    'disabled' => false
+                ],
+                'expanded' => true
+            ])
             ;
 
     }
