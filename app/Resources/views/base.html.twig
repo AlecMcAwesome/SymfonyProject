@@ -31,7 +31,7 @@
                 {% if is_granted('ROLE_ADMIN') %}
                 <li><a href="{{ path('admin_profile')}}">Admin</a></li>
                 {% else %}
-                <li><a href="{{ path('fos_user_profile_show')}}">Profile</a></li>
+                <li><a href="{{ path('privateProfile')}}">Profile</a></li>
                 {% endif %}
                 <li><a href="{{ path('recipes') }}">Recipees</a></li>
             </ul>

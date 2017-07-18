@@ -88,8 +88,8 @@ class AdminController extends Controller{
 
     public function addNewUser(Request $request){
 
-        $usermanager = $this->get('fos_user.user_manager');
-        $newUser = $usermanager->createUser();
+        $userManager = $this->get('fos_user.user_manager');
+        $newUser = $userManager->createUser();
 
         // oprette en form med dan for vi har lavet i AdminCreateUserFormType
         $form = $this->createForm(AdminCreateUserFormType::class, $newUser);
@@ -105,6 +105,9 @@ class AdminController extends Controller{
 
             //dump($form->getData());
             //die;
+
+            return $this->redirectToRoute('admin_profile');
+
         }
 
 

@@ -41,6 +41,9 @@ services:
     app.form.profile:
         class: AppBundle\Form\EditProfileFormType
 
+    app.form.admincreateuser:
+        class: AppBundle\Form\AdminCreateUserFormType
+
 
     app.redirect_after_registration_subscriber:
         class: AppBundle\EventListener\RedirectAfterEventSubscriber

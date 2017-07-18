@@ -40,28 +40,21 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
+            <th>Name</th>
+            <th>Instructions</th>
+            <th>Created By</th>
+            <th>Delete?</th>
         </tr>
         </thead>
         <tbody>
-
+        {% for Recipe in recipes %}
         <tr>
-            <td>test1</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
+            <td>{{ Recipe.getTitle }}</td>
+            <td>{{ Recipe.getInstructions }}</td>
+            <td>{{ Recipe.getUser }}</td>
+            <td><button type="button" class="btn btn-success"><a href="{{ path('deleteRecipe', {'name': Recipe.title}) }}">Delete</a></button>
         </tr>
-        <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-        </tr>
-        <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-        </tr>
+        {% endfor %}
         </tbody>
     </table>
 </div>

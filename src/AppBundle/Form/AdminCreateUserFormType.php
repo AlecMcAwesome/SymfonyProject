@@ -15,7 +15,7 @@ class AdminCreateUserFormType extends AbstractType
     {
         $builder
                 ->add('roles', ChoiceType::class, [
-                    'choices' => ['USER' => ' ROLE_USER', 'ADMIN' => 'ROLE_ADMIN'],
+                    'choices' => ['USER' => 'ROLE_USER', 'ADMIN' => 'ROLE_ADMIN'],
                     'expanded' => true,
                     'multiple' => true,
                 ])
@@ -40,18 +40,3 @@ class AdminCreateUserFormType extends AbstractType
         return 'app_bundle_admin_form_type';
     }
 }
-
-/*
-             $builder
-                ->add('username', TextType::class)
-                ->add('email', EmailType::class)
-                ->add('password', PasswordType::class)
-                ->add('confirmpassword', PasswordType::class, ['mapped' => false])
-                ->add('bio', TextareaType::class)
-                ->add('role', ChoiceType::class, array(
-                    'choices' => array(
-                        'admin' => 'ROLE_ADMIN',
-                        'user' => 'ROLE_USER',
-                    ),
-                ));
- */
