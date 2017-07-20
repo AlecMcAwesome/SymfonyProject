@@ -60,7 +60,7 @@ class Recipe{
     public function __construct() {
         $this->ingredients = new ArrayCollection();
         $this->created_at = new \DateTime();
-        $this->modified_at = new \DateTime();
+        $this->modified_at = new \DateTime('now');
     }
 
     /**
@@ -97,8 +97,30 @@ class Recipe{
         return $this->title;
     }
 
-    public function addIngredients(Ingredients $ingredient){
-        return $this->ingredients->add($ingredient);
+    /**
+     * @param Ingredients $ingredient
+     * @return $this
+     *
+     */
+
+    public function addIngredient(Ingredients $ingredient){
+        $this->ingredients->add($ingredient);
+        return $this;
+
+    }
+
+    /**
+     * Add hashtags.
+     *
+     * @param Collection|array $ingredients
+     * @return self
+     */
+    public function addIngredients($ingredients)
+    {
+        foreach($ingredients as $ingredient){
+            $this->addIngredient($ingredient);
+        }
+        return $this;
     }
 
     /**

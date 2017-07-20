@@ -40,6 +40,7 @@ class Ingredients
      */
     private $name;
 
+
     /**
      * @return mixed
      */
