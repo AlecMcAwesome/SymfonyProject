@@ -97,6 +97,10 @@ class Recipe{
         return $this->title;
     }
 
+    public function addIngredients(Ingredients $ingredient){
+        return $this->ingredients->add($ingredient);
+    }
+
     /**
      * @return mixed
      */
@@ -108,11 +112,6 @@ class Recipe{
     /**
      * @param mixed $ingredients
      */
-    public function setIngredients($ingredients)
-    {
-        $this->ingredients = $ingredients;
-    }
-
     
 
     /**

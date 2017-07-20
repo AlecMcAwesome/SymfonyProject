@@ -35,8 +35,6 @@ class AdminCreateUserFormType extends AbstractType
         return BaseRegistrationFormType::class;
     }
 
-
-    //PROMBLEM HER !!!! :: med FOSUserbundle
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(['data' => 'AppBundle\Entity\User']);

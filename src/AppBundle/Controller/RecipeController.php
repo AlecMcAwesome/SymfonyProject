@@ -12,22 +12,6 @@ use Symfony\Component\HttpFoundation\Request;
     class RecipeController extends Controller
     {
 
-        /**
-         * @Route("/recipe", name="recipes")
-         */
-
-        public function listAction()
-        {
-
-            $em = $this->getDoctrine()->getManager();
-            $recipees = $em->getRepository('AppBundle:Recipe')
-                ->findAll();
-
-
-            return $this->render("Cookbook/Recipees.html.twig", [
-                'recipees' => $recipees
-            ]);
-        }
 
         /**
          * @Route("/recipe/new", name = "newRecipe")
@@ -49,6 +33,7 @@ use Symfony\Component\HttpFoundation\Request;
             if ($formRecipe->isSubmitted() && $formRecipe->isValid()){
 
                 $em = $this->getDoctrine()->getManager();
+
                 $em->persist($recipe);
                 $em->flush();
 

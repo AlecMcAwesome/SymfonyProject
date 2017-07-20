@@ -80,7 +80,7 @@ class AdminController extends Controller{
      * @Route("/admin/user/edit/{userid}", name="admin_edituser")
      */
 
-    public function editUser($userid){
+    public function editUser(Request $request, $userid){
 
         $em = $this->getDoctrine()->getManager();
 
@@ -95,10 +95,11 @@ class AdminController extends Controller{
 
         $form = $this->createForm(AdminEditProfileFormType::class, $userData);
 
+        $form->handleRequest($request);
+
         if($form->isSubmitted() &&  $form->isValid()){
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($form);
+            $em->persist($userData);
             $em->flush();
 
             return $this->redirectToRoute('admin_allusers');
