@@ -4,12 +4,21 @@
 Recipe {{ recipe.title }}
 {% endblock %}
 
+{% block stylesheets %}
+    <style>
+        #instructions{
+            width: 25%;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
 
 <h1>Recipe for {{ recipe.title }}</h1>
     <h2>Created By: <a href="{{ path('profilename', {'profilename' : recipe.user}) }}"> {{ recipe.user }} </a></h2>
 
+    <h2>Last Modified: {{ recipe.modifiedAt|date('Y-m-d') }}</h2>
     <h3>Instructions: </h3>
-    <p> {{ recipe.instructions }}</p>
+    <p id="instructions"> {{ recipe.instructions }}</p>
 
 {% endblock %}

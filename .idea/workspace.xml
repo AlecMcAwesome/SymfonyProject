@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="652301b5-8969-44b3-ad23-859f6cb0d010" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Cookbook/recipeprofile.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Cookbook/recipeprofile.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -430,7 +432,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="add_unversioned_files" value="true" />
@@ -550,7 +552,7 @@
       <workItem from="1500417402286" duration="703000" />
       <workItem from="1500556733180" duration="3830000" />
       <workItem from="1500580138773" duration="3509000" />
-      <workItem from="1500632654133" duration="11843000" />
+      <workItem from="1500632654133" duration="11952000" />
     </task>
     <task id="LOCAL-00001" summary="added all">
       <created>1499952151326</created>
@@ -699,11 +701,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500659904384</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added last modified in recipe profile">
+      <created>1500660324490</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1500660324490</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113673000" />
+    <option name="totallyTimeSpent" value="113782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -744,6 +753,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+      <path value="$PROJECT_DIR$/PraktikSymfony" />
+    </ignored-roots>
     <MESSAGE value="added all" />
     <MESSAGE value="problemer med ChoiceType for roles&#10;&#10;Warning: Missing argument 1 for FOS\UserBundle\Model\User::hasRole(), called in /Users/FrederikPetersen/Desktop/KEA - Datamatiker/Symfony/PraktikStrom/vendor/symfony/symfony/src/Symfony/Component/PropertyAccess/PropertyAccessor.php on line 486 and defined&#10;&#10;&#10;$form = $this-&gt;createForm(AdminFormType::class, $newUser);" />
     <MESSAGE value="Delete user added for admin, showing recipes in admin page(making username linkable) user can now create recipes" />
@@ -761,7 +774,8 @@
     <MESSAGE value="Admin kan nu tilføje users, dog ikke andre admins" />
     <MESSAGE value="admin kan ændre profil" />
     <MESSAGE value="create recipe og edit recipe samt at andre bruger ikke kan ændre recipees lavet (kan ikke finde ud af ingredients)" />
-    <option name="LAST_COMMIT_MESSAGE" value="create recipe og edit recipe samt at andre bruger ikke kan ændre recipees lavet (kan ikke finde ud af ingredients)" />
+    <MESSAGE value="added last modified in recipe profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="added last modified in recipe profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1114,12 +1128,12 @@
         <state relative-caret-position="375">
           <caret line="77" column="61" lean-forward="false" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-            <element signature="e#867#885#1#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="false" />
+            <element signature="e#867#885#1#PHP" expanded="false" />
             <element signature="e#1124#1211#0#PHP" expanded="false" />
-            <element signature="e#1797#1815#1#PHP" expanded="true" />
-            <element signature="e#2243#2259#1#PHP" expanded="true" />
-            <element signature="e#2311#2351#0#PHP" expanded="true" />
+            <element signature="e#1797#1815#1#PHP" expanded="false" />
+            <element signature="e#2243#2259#1#PHP" expanded="false" />
+            <element signature="e#2311#2351#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
