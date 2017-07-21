@@ -44,6 +44,8 @@ services:
     app.form.admincreateuser:
         class: AppBundle\Form\AdminCreateUserFormType
 
+    app.form.editrecipe:
+        class: AppBundle\Form\EditRecipeFormType
 
     app.redirect_after_registration_subscriber:
         class: AppBundle\EventListener\RedirectAfterEventSubscriber

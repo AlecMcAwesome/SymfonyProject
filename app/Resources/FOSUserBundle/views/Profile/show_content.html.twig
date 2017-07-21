@@ -43,6 +43,7 @@
             <th>Name</th>
             <th>Instructions</th>
             <th>Created By</th>
+            <th>Edit</th>
             <th>Delete?</th>
         </tr>
         </thead>
@@ -52,6 +53,7 @@
             <td>{{ Recipe.getTitle }}</td>
             <td>{{ Recipe.getInstructions }}</td>
             <td>{{ Recipe.getUser }}</td>
+            <td><button type="button" class="btn btn-success"><a href="{{ path('editrecipe', {'recipeid': Recipe.getId, 'username' : Recipe.getUser}) }}"> Edit</td>
             <td><button type="button" class="btn btn-success"><a href="{{ path('deleteRecipe', {'name': Recipe.title}) }}">Delete</a></button>
         </tr>
         {% endfor %}

@@ -5,49 +5,51 @@
 
     {{  form_start (newRecipe) }}
     {{ form_row(newRecipe.title) }}
-    <ul id="ingredient-fields-list"
-        data-prototype="{{ form_row(newRecipe.ingredients.vars.prototype)|e }}">
-        {% for Recipe in newRecipe.ingredients %}
-            <li>
-                {{ form_errors(newRecipe.ingredients) }}
-                {{ form_row(newRecipe.ingredients) }}
-            </li>
-        {% endfor %}
-    </ul>
-    <a href="#" id="add-another-ingredient">Add Ingredient</a>
      {{ form_widget(newRecipe) }}
-
      {{ form_end(newRecipe) }}
 
+    <!--
+    { block javascripts %}
+        <script type="text/javascript">
+            // keep track of how many email fields have been rendered
+            var IngredientCount =  '{ newRecipe.ingredients|length }}';
 
+            jQuery(document).ready(function() {
+                jQuery('#add-another-ingredient').click(function(e) {
+                    e.preventDefault();
+
+                    var ingredientList = jQuery('#ingredient-fields-list');
+
+                    // grab the prototype template
+                    var newWidget = ingredientList.attr('data-prototype');
+                    // replace the "__name__" used in the id and name of the prototype
+                    // with a number that's unique to your emails
+                    // end name attribute looks like name="contact[emails][2]"
+                    newWidget = newWidget.replace("Ingredients", IngredientCount);
+                    IngredientCount++;
+
+                    // create a new list element and add it to the list
+                    var newLi = jQuery('<li></li>').html(newWidget);
+                    newLi.appendTo(ingredientList);
+                });
+            })
+        </script>
+    { endblock %}
+
+    -->
+
+    <!--
+        <ul id="ingredient-fields-list"
+            data-prototype="{ form_row(newRecipe.ingredients.vars.prototype)|e }}">
+            { for Recipe in newRecipe.ingredients %}
+                <li>
+                    { form_errors(newRecipe.ingredients) }}
+                    { form_row(newRecipe.ingredients) }}
+                </li>
+            { endfor %}
+        </ul>
+        <a href="#" id="add-another-ingredient">Add Ingredient</a>
+    -->
 
 
 {% endblock %}
-
-{% block javascripts %}
-    <script type="text/javascript">
-        // keep track of how many email fields have been rendered
-        var IngredientCount =  '{{ newRecipe.ingredients|length }}';
-
-        jQuery(document).ready(function() {
-            jQuery('#add-another-ingredient').click(function(e) {
-                e.preventDefault();
-
-                var ingredientList = jQuery('#ingredient-fields-list');
-
-                // grab the prototype template
-                var newWidget = ingredientList.attr('data-prototype');
-                // replace the "__name__" used in the id and name of the prototype
-                // with a number that's unique to your emails
-                // end name attribute looks like name="contact[emails][2]"
-                newWidget = newWidget.replace("Ingredients", IngredientCount);
-                IngredientCount++;
-
-                // create a new list element and add it to the list
-                var newLi = jQuery('<li></li>').html(newWidget);
-                newLi.appendTo(ingredientList);
-            });
-        })
-    </script>
-{% endblock %}
-

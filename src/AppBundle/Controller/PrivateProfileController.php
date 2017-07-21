@@ -2,6 +2,8 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Recipe;
+use AppBundle\Form\EditRecipeFormType;
 use FOS\UserBundle\Controller\ProfileController as BaseProfileCrontroller;
 use FOS\UserBundle\Model\UserInterface;
 use Symfony\Component\HttpFoundation\File\Exception\AccessDeniedException;
@@ -51,5 +53,40 @@ class PrivateProfileController extends BaseProfileCrontroller{
 
     }
 
+    /**
+     * @Route("/profile/recipe/edit/{recipeid}/{username}", name="editrecipe")
+     */
 
+    public function editRecipe(Request $request, $recipeid, $username){
+
+
+        $em = $this->getDoctrine()->getManager();
+
+        $recipeData = $em->getRepository('AppBundle:Recipe')
+                            ->findOneBy(['id' => $recipeid])
+        ;
+
+        if ($recipeData->getUser() == $username){
+            $form = $this->createForm(EditRecipeFormType::class, $recipeData);
+
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()){
+                $em->persist($recipeData);
+                $em->flush();
+
+                return $this->redirectToRoute('privateProfile');
+
+            }
+
+            return $this->render('Profile/PrivateRecipeProfile.html.twig', array(
+                'editrecipeform' => $form->createView(),
+                'recipe' => $recipeData
+            ));
+
+        }else{
+            return $this->createAccessDeniedException('you do not have permission to edit this recipe :(');
+        }
+
+    }
 }

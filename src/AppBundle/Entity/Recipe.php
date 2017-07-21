@@ -109,7 +109,7 @@ class Recipe{
 
 
     public function addIngredients($ingredients){
-        $this->ingredients->add($ingredients);
+        $this->ingredients[] = $ingredients;
         return $this;
     }
 

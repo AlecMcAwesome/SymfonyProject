@@ -16,11 +16,9 @@ use Symfony\Component\HttpFoundation\Request;
         /**
          * @Route("/recipe/new", name = "newRecipe")
          */
-
         public function addRecipe(Request $request){
 
 
-            $ingredients = new Ingredients();
             $recipe = new Recipe();
             $user = $this->getUser();
             $recipe->setUser($user);
@@ -35,14 +33,11 @@ use Symfony\Component\HttpFoundation\Request;
 
                 $em = $this->getDoctrine()->getManager();
 
-                $recipe->addIngredients($ingredients);
                 $em->persist($recipe);
                 $em->flush();
 
-                dump($recipe);
-                die;
 
-               //  return $this->redirectToRoute('fos_user_profile_show');
+                 return $this->redirectToRoute('privateProfile');
             }
 
 
@@ -53,10 +48,10 @@ use Symfony\Component\HttpFoundation\Request;
         }
 
 
+
         /**
          * @Route("/recipe/{recipename}", name = "recipename")
          */
-
         public function showRecipe($recipename)
         {
 
