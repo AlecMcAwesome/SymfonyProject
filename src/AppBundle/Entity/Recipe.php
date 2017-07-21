@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -97,31 +98,6 @@ class Recipe{
         return $this->title;
     }
 
-    /**
-     * @param Ingredients $ingredient
-     * @return $this
-     *
-     */
-
-    public function addIngredient(Ingredients $ingredient){
-        $this->ingredients->add($ingredient);
-        return $this;
-
-    }
-
-    /**
-     * Add hashtags.
-     *
-     * @param Collection|array $ingredients
-     * @return self
-     */
-    public function addIngredients($ingredients)
-    {
-        foreach($ingredients as $ingredient){
-            $this->addIngredient($ingredient);
-        }
-        return $this;
-    }
 
     /**
      * @return mixed
@@ -131,10 +107,19 @@ class Recipe{
         return $this->ingredients;
     }
 
+
+    public function addIngredients($ingredients){
+        $this->ingredients->add($ingredients);
+        return $this;
+    }
+
     /**
      * @param mixed $ingredients
      */
-    
+    public function setIngredients($ingredients)
+    {
+        $this->ingredients = $ingredients;
+    }
 
     /**
      * Set instructions

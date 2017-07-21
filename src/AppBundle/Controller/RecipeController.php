@@ -20,6 +20,7 @@ use Symfony\Component\HttpFoundation\Request;
         public function addRecipe(Request $request){
 
 
+            $ingredients = new Ingredients();
             $recipe = new Recipe();
             $user = $this->getUser();
             $recipe->setUser($user);
@@ -34,6 +35,7 @@ use Symfony\Component\HttpFoundation\Request;
 
                 $em = $this->getDoctrine()->getManager();
 
+                $recipe->addIngredients($ingredients);
                 $em->persist($recipe);
                 $em->flush();
 

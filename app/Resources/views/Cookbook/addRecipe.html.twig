@@ -4,6 +4,7 @@
     <h1>Create your own Recipe</h1>
 
     {{  form_start (newRecipe) }}
+    {{ form_row(newRecipe.title) }}
     <ul id="ingredient-fields-list"
         data-prototype="{{ form_row(newRecipe.ingredients.vars.prototype)|e }}">
         {% for Recipe in newRecipe.ingredients %}
@@ -39,7 +40,7 @@
                 // replace the "__name__" used in the id and name of the prototype
                 // with a number that's unique to your emails
                 // end name attribute looks like name="contact[emails][2]"
-                newWidget = newWidget.replace(/__name__/g, IngredientCount);
+                newWidget = newWidget.replace("Ingredients", IngredientCount);
                 IngredientCount++;
 
                 // create a new list element and add it to the list
