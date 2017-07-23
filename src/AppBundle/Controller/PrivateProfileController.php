@@ -2,7 +2,6 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Recipe;
 use AppBundle\Form\EditRecipeFormType;
 use FOS\UserBundle\Controller\ProfileController as BaseProfileCrontroller;
 use FOS\UserBundle\Model\UserInterface;
@@ -72,6 +71,8 @@ class PrivateProfileController extends BaseProfileCrontroller{
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()){
+
+                $recipeData->updatedTimestamps();
                 $em->persist($recipeData);
                 $em->flush();
 

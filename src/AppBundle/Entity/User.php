@@ -52,6 +52,9 @@ class User extends BaseUser{
 
     public function __construct()
     {
+        parent::__construct();
+        $this->addRole('user', ['ROLE_USER']);
+        $this->addRole('admin', ['ROLE_ADMIN']);
         $this->recipe = new ArrayCollection();
         $this->joined_at = new \DateTime('now');
     }

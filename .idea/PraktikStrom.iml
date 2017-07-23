@@ -62,6 +62,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spraed/pdf-generator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/phpunit-bridge" />
@@ -122,6 +123,7 @@
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
+          <root url="file://$MODULE_DIR$/vendor/spraed/pdf-generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/phpunit-bridge" />
@@ -168,6 +170,7 @@
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
+          <root url="file://$MODULE_DIR$/vendor/spraed/pdf-generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
           <root url="file://$MODULE_DIR$/vendor/symfony/phpunit-bridge" />

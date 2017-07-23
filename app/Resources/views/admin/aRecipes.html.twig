@@ -21,7 +21,7 @@
                     <td>{{ Recipe.instructions }}</td>
                     <td> {{ Recipe.user }}</td>
                     <td>{{ Recipe.createdAt|date('Y-m-d') }}</td>
-                    <td><button type="button" class="btn btn-success">Edit</button>
+                    <td><button type="button" class="btn btn-success"><a href="{{ path('admin_editrecipe', {'name': Recipe.title}) }}">Edit</a></button>
                     </td>
                     <td><button type="button" class="btn btn-success"><a href="{{ path('admin_deleteRecipe', {'name': Recipe.title}) }}">Delete</a></button>
                     </td>

@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,8 +34,7 @@ class Recipe{
     private $title;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Ingredients", mappedBy="recipe")
-     * @ORM\JoinTable(name="ingredients")
+     * @ORM\Column(type="array", name="ingredients", nullable=true)
      */
 
     private $ingredients;
@@ -59,7 +59,6 @@ class Recipe{
     private $modified_at;
 
     public function __construct() {
-        $this->ingredients = new ArrayCollection();
         $this->created_at = new \DateTime();
         $this->modified_at = new \DateTime('now');
     }
@@ -98,19 +97,14 @@ class Recipe{
         return $this->title;
     }
 
-
     /**
-     * @return mixed
+     * @return array
      */
     public function getIngredients()
     {
-        return $this->ingredients;
-    }
+        //return $this->ingredients;
+        return array_values($this->ingredients);
 
-
-    public function addIngredients($ingredients){
-        $this->ingredients[] = $ingredients;
-        return $this;
     }
 
     /**
@@ -120,6 +114,9 @@ class Recipe{
     {
         $this->ingredients = $ingredients;
     }
+
+
+
 
     /**
      * Set instructions
@@ -168,6 +165,21 @@ class Recipe{
     {
         return $this->created_at;
     }
+
+    /**
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps()
+    {
+        $this->setModifiedAt(new \DateTime('now'));
+
+        if ($this->getCreatedAt() == null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
 
     /**
      * Set modifiedAt

@@ -1,15 +1,15 @@
 <?php
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Ingredients;
 use AppBundle\Entity\Recipe;
 use AppBundle\Form\AddRecipeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Spraed\PDFGeneratorBundle\PDFGenerator\PDFGenerator;
+use Symfony\Component\HttpFoundation\Response;
 
-
-    class RecipeController extends Controller
+class RecipeController extends Controller
     {
 
 
@@ -56,20 +56,19 @@ use Symfony\Component\HttpFoundation\Request;
         {
 
             $em = $this->getDoctrine()->getManager();
-
             $recipeData = $em->getRepository('AppBundle:Recipe')
                             ->findOneBy(['title' => $recipename]);
             ;
-
-
             if (!$recipeData){
                 throw $this->createNotFoundException('damn son we aint go that recipe brah!');
             }
 
 
-            return $this->render('Cookbook/Recipeprofile.html.twig', [
-                'recipe' => $recipeData
-            ]);
-        }
 
+
+            return $this->render('Cookbook/Recipeprofile.html.twig', [
+                'recipe' => $recipeData,
+            ]);
+
+        }
     }

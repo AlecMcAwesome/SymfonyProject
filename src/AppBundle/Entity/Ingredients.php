@@ -28,33 +28,12 @@ class Ingredients
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Recipe", inversedBy="ingredients")
-     * @ORM\JoinColumn(name="recipe_id", referencedColumnName="id", nullable=true, onDelete="CASCADE")
-     */
-    private $recipe;
-
-    /**
      * @ORM\Column(type="string", length=50)
      *
      */
     private $name;
 
 
-    /**
-     * @return mixed
-     */
-    public function getRecipe()
-    {
-        return $this->recipe;
-    }
-
-    /**
-     * @param mixed $recipe
-     */
-    public function setRecipe($recipe)
-    {
-        $this->recipe = $recipe;
-    }
 
     /**
      * @return mixed

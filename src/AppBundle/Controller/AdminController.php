@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Form\AdminCreateUserFormType;
 use AppBundle\Form\AdminEditProfileFormType;
+use AppBundle\Form\EditRecipeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -38,6 +39,40 @@ class AdminController extends Controller{
     }
 
     /**
+     * @Route("/admin/recipes/edit/{name}", name="admin_editrecipe")
+     */
+
+    public function editRecipe(Request $request, $name){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $recipeData = $em->getRepository('AppBundle:Recipe')
+                    ->findOneBy(['title' => $name])
+            ;
+        $form = $this->createForm(EditRecipeFormType::class, $recipeData);
+
+        $form->handleRequest($request);
+
+
+        if ($form->isSubmitted() && $form->isValid()){
+
+            $recipeData->updatedTimestamps();
+            $em->persist($recipeData);
+            $em->flush();
+
+            return $this->redirectToRoute('admin_recipes');
+
+        }
+
+        return $this->render('admin/aEditRecipe.html.twig', array(
+            'editrecipe' => $form->createView(),
+            'recipedata' => $recipeData
+        ));
+
+
+    }
+
+    /**
      * @Route("/admin/recipes/delete/{name}", name="admin_deleteRecipe")
      */
     public function deleteRecipe($name){
@@ -53,8 +88,6 @@ class AdminController extends Controller{
         return $this->redirectToRoute('admin_recipes');
 
     }
-
-
 
     /**
      * @Route("/admin/users", name="admin_allusers")

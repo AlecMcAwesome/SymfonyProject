@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Spraed\PDFGeneratorBundle\SpraedPDFGeneratorBundle(),
             new AppBundle\AppBundle(),
             ];
 
