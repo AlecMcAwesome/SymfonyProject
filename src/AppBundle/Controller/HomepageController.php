@@ -11,6 +11,11 @@ class HomepageController extends Controller
     /**
      * @Route("/", name="homepage")
      */
+
+    /*
+     * homepage henter alle opskrifter fra vores database via doctrines entitymanager
+     * derefter redner vi siden med data fra recipes variablen
+     */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();

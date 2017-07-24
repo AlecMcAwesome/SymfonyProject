@@ -11,10 +11,19 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PrivateProfileController extends BaseProfileCrontroller{
 
+    /*
+     * private profile controller har overrided fosuserbundles profil controller så
+     * der kunne laves ekstra features såsom table af ingredienserne.
+     */
     /**
      * @Route("/profile/private", name="privateProfile")
      */
 
+    /*
+     * overidded funktion der viser user profilen fra fosuserbundle forskellen på denne og fos
+     * er at vi har tilføjet et doctrine kald til vores database for at finde opskrifter der stemmer overens med
+     * profilen
+     */
     public function showAction(){
 
         $user = $this->getUser();
@@ -38,6 +47,11 @@ class PrivateProfileController extends BaseProfileCrontroller{
      *
      */
 
+
+    /*
+     * delete recipe sletter den valgte recipe fra vores table i twig.
+     * den det valgte entity kommer fra twigs 'delete' knap i table
+     */
     public function deleteRecipe($name){
 
         $em = $this->getDoctrine()->getManager();

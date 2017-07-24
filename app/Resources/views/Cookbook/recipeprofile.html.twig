@@ -22,12 +22,13 @@ Recipe {{ recipe.title }}
     <h2>Ingredients:</h2>
     <ul>
         {% for Recipe in recipe %}
-            <li>{{ recipe.ngredients }}</li>
-            {% endfor %}
+            <li>{{ Recipe['recipe.ingredients'] }}</li>
+        {% endfor %}
     </ul>
+
     <h2>Instructions: </h2>
     <p id="instructions"> {{ recipe.instructions }}</p>
 
-    <td><button type="button" class="btn btn-success">Download</button>
+    <td><button type="button" class="btn btn-success"><a>Download</a></button>
 
 {% endblock %}
