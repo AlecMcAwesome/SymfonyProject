@@ -12,7 +12,7 @@ class EditProfileFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->
-        add('Bio', TextareaType::class);
+            add('Bio', TextareaType::class);
     }
 
     public function getParent()

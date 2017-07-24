@@ -24,8 +24,8 @@ Recipe {{ recipe.title }}
 
     <h2>Ingredients:</h2>
     <ul>
-        {% for Recipe in recipe %}
-            <li>{{ Recipe[ingredients] }}</li>
+        {% for ingredient in recipe.ingredients %}
+            <li>{{ ingredient }}</li>
         {% endfor %}
     </ul>
 
