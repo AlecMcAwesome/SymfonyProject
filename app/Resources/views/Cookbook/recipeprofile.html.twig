@@ -14,6 +14,9 @@ Recipe {{ recipe.title }}
 
 {% block body %}
 
+    <!-- recipe profilen viser den valgte opskrift der er hentet fra databasen via doctrine
+         der er gemt i recipe når vi render templaten i controlleren-->
+
 <h1>Recipe for {{ recipe.title }}</h1>
     <h2>Created By: <a href="{{ path('profilename', {'profilename' : recipe.user}) }}"> {{ recipe.user }} </a></h2>
     <h2>Created: {{ recipe.getCreatedAt|date('Y-m-d H:i:s') }}</h2>
@@ -22,7 +25,7 @@ Recipe {{ recipe.title }}
     <h2>Ingredients:</h2>
     <ul>
         {% for Recipe in recipe %}
-            <li>{{ Recipe['recipe.ingredients'] }}</li>
+            <li>{{ Recipe[ingredients] }}</li>
         {% endfor %}
     </ul>
 

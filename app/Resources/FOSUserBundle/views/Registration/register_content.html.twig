@@ -1,6 +1,7 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 <h1>Register for cookbook here:</h1>
+<!-- templaten er ovrrided fra fosuserbundle -->
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_widget(form) }}

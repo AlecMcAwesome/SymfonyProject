@@ -18,6 +18,8 @@
     }
 </style>
 {% endblock %}
+<!-- templaten er ovrrided fra fosuserbundle -->
+
 <h1>Your profile page:</h1>
 
 <div class="fos_user_user_show">
@@ -31,7 +33,9 @@
 <button type="button" class="btn"><a href="{{ path('fos_user_change_password') }}">Reset Password</a></button>
 <button type="button" class="btn"><a href="{{ path('newRecipe') }}">Create Recipe</a></button>
 
-
+<!-- dette table er kun muligt fordi vi har overrided hele fos controlleren i privateprofilecontroller
+        table data looper igennem opskrifter i opskrift entity som brugeren har lavet. der er også buttons
+        hvor man kan ændre eller slette-->
 <h2>
     Created Recipees:
 </h2>

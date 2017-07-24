@@ -20,7 +20,11 @@ class Recipe{
     *@ORM\Column(type="integer")
     */
 
-    protected $id;    
+    protected $id;
+
+    /*
+     * vores foreign key til user.
+     */
 
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="recipe")
@@ -102,8 +106,7 @@ class Recipe{
      */
     public function getIngredients()
     {
-        //return $this->ingredients;
-        return array_values($this->ingredients);
+        return $this->ingredients;
 
     }
 

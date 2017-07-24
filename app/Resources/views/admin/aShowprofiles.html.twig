@@ -8,10 +8,15 @@
 {% endblock %}
 
 {% block body %}
+    <!-- hvid ud har rollen admin kan du se dette -->
     {% if is_granted('ROLE_ADMIN') %}
 
         <div id="adduser">
             <button type="button" class="btn btn-success"><a href="{{ path('admin_newuser') }}">Add User</a></button>
+        </div>
+
+        <!-- dette table der viser alle users i databasen inklusiv admins via et forloop i user. her er der mulighed for at ændre
+             og slette usere i table -->
 
         </div>
         <div class="container">
@@ -30,6 +35,7 @@
                 <tbody>
                 {% for User in users %}
                     <tr>
+                        <!-- der bruges get metoder til at hente -->
                         <td>{{ User.id }}</td>
                         <td><a href="{{ path('profilename', {'profilename' : User.username}) }}">{{ User.username }}</a></td>
                         <td>{{ User.email }}</td>
